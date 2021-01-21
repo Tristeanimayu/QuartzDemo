@@ -1,0 +1,1319 @@
+2021-01-13 14:56:25.318 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 17392 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 14:56:25.319 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 14:56:25.694 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 14:56:25.903 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 14:56:25.910 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 14:56:25.910 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 14:56:25.977 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 14:56:25.977 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 632 ms
+2021-01-13 14:56:26.060 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 14:57:09.122 [main] ERROR com.zaxxer.hikari.pool.HikariPool - Retail_HikariCP - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:854)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:90)
+	at org.springframework.boot.autoconfigure.quartz.QuartzDataSourceInitializer.getDatabaseName(QuartzDataSourceInitializer.java:61)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.initialize(AbstractDataSourceInitializer.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:10)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:571)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:548)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:682)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:309)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1596)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:588)
+	... 73 common frames omitted
+Caused by: java.io.IOException: Connection timed out: connect, socket connect lapse 21004 ms. /192.168.1.107 1521 30000 1 true
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:233)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:174)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:510)
+	... 78 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:454)
+	at java.base/sun.nio.ch.Net.connect(Net.java:446)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.base/java.nio.channels.SocketChannel.open(SocketChannel.java:194)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:99)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:77)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:192)
+	... 80 common frames omitted
+2021-01-13 14:57:09.130 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jobController': Unsatisfied dependency expressed through field 'quartzJobComponent'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJobComponent': Unsatisfied dependency expressed through field 'scheduler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+2021-01-13 14:57:09.132 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-01-13 14:57:09.139 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-13 14:57:09.144 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jobController': Unsatisfied dependency expressed through field 'quartzJobComponent'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJobComponent': Unsatisfied dependency expressed through field 'scheduler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJobComponent': Unsatisfied dependency expressed through field 'scheduler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:98)
+	at org.springframework.boot.autoconfigure.quartz.QuartzDataSourceInitializer.getDatabaseName(QuartzDataSourceInitializer.java:61)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.initialize(AbstractDataSourceInitializer.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 47 common frames omitted
+Caused by: org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:345)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:90)
+	... 56 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	... 58 common frames omitted
+Caused by: java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:854)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 59 common frames omitted
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:571)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:548)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:682)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:309)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1596)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:588)
+	... 73 common frames omitted
+Caused by: java.io.IOException: Connection timed out: connect, socket connect lapse 21004 ms. /192.168.1.107 1521 30000 1 true
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:233)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:174)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:510)
+	... 78 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:454)
+	at java.base/sun.nio.ch.Net.connect(Net.java:446)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.base/java.nio.channels.SocketChannel.open(SocketChannel.java:194)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:99)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:77)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:192)
+	... 80 common frames omitted
+2021-01-13 15:05:42.255 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 4392 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:05:42.257 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:05:42.598 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:05:42.792 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:05:42.797 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:05:42.797 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:05:42.862 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:05:42.862 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 580 ms
+2021-01-13 15:05:42.938 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:05:43.117 [main] ERROR com.zaxxer.hikari.pool.PoolBase - Retail_HikariCP - Failed to execute connection test query (ORA-00923: 未找到要求的 FROM 关键字
+).
+2021-01-13 15:05:43.120 [main] ERROR com.zaxxer.hikari.pool.HikariPool - Retail_HikariCP - Error thrown while acquiring connection from data source
+java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:765)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303)
+	at com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+	at com.zaxxer.hikari.pool.PoolBase.checkValidationSupport(PoolBase.java:461)
+	at com.zaxxer.hikari.pool.PoolBase.checkDriverSupport(PoolBase.java:441)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:410)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:363)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:90)
+	at org.springframework.boot.autoconfigure.quartz.QuartzDataSourceInitializer.getDatabaseName(QuartzDataSourceInitializer.java:61)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.initialize(AbstractDataSourceInitializer.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:10)
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 85 common frames omitted
+2021-01-13 15:05:43.123 [main] ERROR com.zaxxer.hikari.pool.HikariPool - Retail_HikariCP - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:765)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303)
+	at com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+	at com.zaxxer.hikari.pool.PoolBase.checkValidationSupport(PoolBase.java:461)
+	at com.zaxxer.hikari.pool.PoolBase.checkDriverSupport(PoolBase.java:441)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:410)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:363)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:90)
+	at org.springframework.boot.autoconfigure.quartz.QuartzDataSourceInitializer.getDatabaseName(QuartzDataSourceInitializer.java:61)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.initialize(AbstractDataSourceInitializer.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:10)
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 85 common frames omitted
+2021-01-13 15:05:43.126 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jobController': Unsatisfied dependency expressed through field 'quartzJobComponent'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJobComponent': Unsatisfied dependency expressed through field 'scheduler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+2021-01-13 15:05:43.127 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-01-13 15:05:43.135 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-13 15:05:43.139 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jobController': Unsatisfied dependency expressed through field 'quartzJobComponent'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJobComponent': Unsatisfied dependency expressed through field 'scheduler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quartzJobComponent': Unsatisfied dependency expressed through field 'scheduler'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'quartzDataSourceInitializer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Unable to detect database type
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:98)
+	at org.springframework.boot.autoconfigure.quartz.QuartzDataSourceInitializer.getDatabaseName(QuartzDataSourceInitializer.java:61)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.initialize(AbstractDataSourceInitializer.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 47 common frames omitted
+Caused by: org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:345)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.boot.jdbc.AbstractDataSourceInitializer.getDatabaseName(AbstractDataSourceInitializer.java:90)
+	... 56 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	... 58 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:765)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303)
+	at com.zaxxer.hikari.pool.PoolBase.executeSql(PoolBase.java:577)
+	at com.zaxxer.hikari.pool.PoolBase.checkValidationSupport(PoolBase.java:461)
+	at com.zaxxer.hikari.pool.PoolBase.checkDriverSupport(PoolBase.java:441)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:410)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:363)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 59 common frames omitted
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 85 common frames omitted
+2021-01-13 15:06:55.377 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 13788 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:06:55.379 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:06:55.716 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:06:55.905 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:06:55.911 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:06:55.911 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:06:55.976 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:06:55.976 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 573 ms
+2021-01-13 15:06:56.054 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:06:56.252 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 15:06:56.655 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 15:06:56.656 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 15:06:56.662 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 15:06:56.662 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 15:06:56.663 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 15:06:56.665 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 15:06:56.665 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 15:06:56.665 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 15:06:56.665 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 15:06:56.665 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@62a54948
+2021-01-13 15:06:56.735 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 15:06:56.889 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 15:06:56.890 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 15:06:56.916 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 15:06:56.920 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 15:06:56.920 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 15:06:56.921 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 15:06:56.922 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 15:06:56.923 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:06:56.930 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.805 seconds (JVM running for 2.672)
+2021-01-13 15:08:44.738 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 15:08:44.738 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 15:08:44.742 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 15:08:44.754 [http-nio-8085-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-01-13 15:11:27.033 [http-nio-8085-exec-6] INFO  org.apache.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xe50x010x000x000xe10x030x03k0x1e0x970x1eoO0xb50x840x1c0x810x8f"0x0e0x0aR0x160xa00x1fI0xd6i10xa20xab0xfe0xf1@UG0x860xca0x7f]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:418)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:260)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2021-01-13 15:12:08.972 [http-nio-8085-exec-7] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-01-13 15:20:40.123 [http-nio-8085-exec-5] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-01-13 15:20:52.752 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 17868 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:20:52.754 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:20:53.106 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:20:53.295 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:20:53.300 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:20:53.300 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:20:53.365 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:20:53.365 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 583 ms
+2021-01-13 15:20:53.441 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:20:53.637 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 15:20:54.363 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 15:20:54.364 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 15:20:54.368 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 15:20:54.368 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 15:20:54.369 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 15:20:54.370 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 15:20:54.371 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 15:20:54.371 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 15:20:54.371 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 15:20:54.371 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1b3ab4f9
+2021-01-13 15:20:54.437 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 15:20:54.586 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 15:20:54.587 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 15:20:54.610 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 15:20:54.614 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 15:20:54.614 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 15:20:54.615 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 15:20:54.616 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 15:20:54.617 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:20:54.624 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.128 seconds (JVM running for 2.99)
+2021-01-13 15:21:05.355 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 15:21:05.355 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 15:21:05.358 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 15:21:05.368 [http-nio-8085-exec-1] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 15:21:05.394 [http-nio-8085-exec-1] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:21:54.620 [QuartzScheduler_quartzScheduler-NON_CLUSTERED_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2021-01-13 15:21:54.665 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:21:54.665 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:29:22.042 [http-nio-8085-exec-8] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 15:29:22.050 [http-nio-8085-exec-8] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:29:54.624 [QuartzScheduler_quartzScheduler-NON_CLUSTERED_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2021-01-13 15:29:54.647 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:29:54.647 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:35:51.590 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 17804 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:35:51.591 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:35:51.963 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:35:52.176 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:35:52.182 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:35:52.183 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:35:52.250 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:35:52.250 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 628 ms
+2021-01-13 15:35:52.331 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:35:52.534 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 15:35:55.212 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 15:35:55.213 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 15:35:55.217 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 15:35:55.217 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 15:35:55.218 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 15:35:55.218 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 15:35:55.219 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 15:35:55.219 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 15:35:55.219 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 15:35:55.219 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@35adf623
+2021-01-13 15:35:55.286 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 15:35:55.434 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 15:35:55.435 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 15:35:55.458 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 15:35:55.463 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 15:35:55.463 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 15:35:55.464 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 15:35:55.465 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 15:35:55.466 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:35:55.472 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 4.162 seconds (JVM running for 5.041)
+2021-01-13 15:44:27.809 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 6316 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:44:27.810 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:44:28.168 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:44:28.359 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:44:28.365 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:44:28.365 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:44:28.431 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:44:28.431 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 592 ms
+2021-01-13 15:44:28.510 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:44:28.708 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 15:44:29.369 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 15:44:29.369 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 15:44:29.374 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 15:44:29.374 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 15:44:29.375 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 15:44:29.376 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 15:44:29.376 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 15:44:29.376 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 15:44:29.376 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 15:44:29.376 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2ad99cf3
+2021-01-13 15:44:29.442 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 15:44:29.588 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 15:44:29.589 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 15:44:29.612 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 15:44:29.616 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 15:44:29.616 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 15:44:29.617 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 15:44:29.618 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 15:44:29.619 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:44:29.626 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.074 seconds (JVM running for 2.933)
+2021-01-13 15:44:35.518 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 15:44:35.518 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 15:44:35.521 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 15:44:35.530 [http-nio-8085-exec-1] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 15:44:35.556 [http-nio-8085-exec-1] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:45:02.205 [http-nio-8085-exec-2] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 15:45:02.208 [http-nio-8085-exec-2] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId
+2021-01-13 15:45:29.622 [QuartzScheduler_quartzScheduler-NON_CLUSTERED_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2021-01-13 15:45:29.669 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:45:29.669 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:45:30.009 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:45:30.009 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:45:40.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:45:40.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:45:50.008 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:45:50.008 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:00.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:46:00.009 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:10.009 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:46:10.009 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:20.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:46:20.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:30.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:46:30.008 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:40.009 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:46:40.009 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:50.009 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:46:50.009 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:46:58.824 [http-nio-8085-exec-3] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-01-13 15:47:00.009 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:47:00.009 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId]
+2021-01-13 15:47:06.319 [http-nio-8085-exec-5] INFO  com.example.demo.controller.JobController - 停止任务
+2021-01-13 15:47:56.575 [http-nio-8085-exec-6] INFO  com.example.demo.controller.JobController - 恢复任务
+2021-01-13 15:55:28.503 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 4044 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:55:28.505 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:55:28.877 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:55:29.076 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:55:29.081 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:55:29.081 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:55:29.147 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:55:29.147 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 611 ms
+2021-01-13 15:55:29.224 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:55:29.419 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 15:55:30.094 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 15:55:30.095 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 15:55:30.099 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 15:55:30.099 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 15:55:30.100 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 15:55:30.101 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 15:55:30.101 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 15:55:30.101 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 15:55:30.101 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 15:55:30.101 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1f736d00
+2021-01-13 15:55:30.167 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 15:55:30.312 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 15:55:30.313 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 15:55:30.336 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 15:55:30.340 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 15:55:30.340 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 15:55:30.342 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 15:55:30.343 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 15:55:30.344 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:55:30.350 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.111 seconds (JVM running for 2.99)
+2021-01-13 15:55:37.583 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 15:55:37.583 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 15:55:37.586 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 15:55:37.593 [http-nio-8085-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-01-13 15:56:59.435 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 2448 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 15:56:59.437 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 15:56:59.788 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 15:56:59.978 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 15:56:59.983 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 15:56:59.983 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 15:57:00.049 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 15:57:00.049 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 580 ms
+2021-01-13 15:57:00.151 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 15:57:00.152 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 15:57:00.156 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 15:57:00.156 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 15:57:00.160 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 15:57:00.361 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 15:57:00.366 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 15:57:00.367 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 15:57:00.369 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 15:57:00.369 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 15:57:00.369 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 15:57:00.369 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@69cd7630
+2021-01-13 15:57:00.433 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 15:57:00.584 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 15:57:00.585 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 15:57:00.608 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 15:57:00.610 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 15:57:00.610 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 15:57:00.611 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 15:57:00.611 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 15:57:00.612 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:57:00.618 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.425 seconds (JVM running for 2.293)
+2021-01-13 15:58:45.173 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 15:58:45.173 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 15:58:45.176 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 15:58:45.185 [http-nio-8085-exec-1] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 15:58:45.211 [http-nio-8085-exec-1] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 15:59:00.615 [QuartzScheduler_quartzScheduler-NON_CLUSTERED_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2021-01-13 15:59:00.659 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:59:00.659 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 15:59:10.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:59:10.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 15:59:11.245 [http-nio-8085-exec-4] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 15:59:11.250 [http-nio-8085-exec-4] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId1
+2021-01-13 15:59:20.010 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:59:20.010 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 15:59:30.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:59:30.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 15:59:40.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:59:40.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 15:59:50.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 15:59:50.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:00:00.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:00:00.009 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:00:10.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:00:10.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:00:20.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:00:20.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:00:30.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:00:30.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:00:40.009 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:00:40.009 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:00:50.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:00:50.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:01:00.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:01:00.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:01:10.006 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:01:10.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:01:20.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:01:20.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:01:30.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:01:30.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:01:40.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:01:40.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:01:50.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:01:50.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:02:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:02:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:02:10.007 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:02:10.007 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:02:20.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:02:20.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:02:30.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:02:30.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:02:40.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:02:40.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:02:50.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:02:50.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:03:00.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:03:00.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:03:10.008 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:03:10.008 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:03:20.007 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:03:20.007 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:03:30.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:03:30.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:03:40.008 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:03:40.008 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:03:50.007 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:03:50.007 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:04:00.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:04:00.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:04:10.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:04:10.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:04:20.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:04:20.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:04:30.004 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:04:30.004 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:04:32.608 [http-nio-8085-exec-5] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:04:32.613 [http-nio-8085-exec-5] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId2
+2021-01-13 16:04:40.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:04:40.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:04:50.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:04:50.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:05:00.039 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:05:00.040 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:05:10.006 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:05:10.006 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:05:20.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:05:20.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:05:30.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:05:30.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:05:40.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:05:40.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:05:50.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:05:50.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:06:00.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:06:00.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:06:10.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:06:10.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:06:20.006 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:06:20.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:06:30.008 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:06:30.009 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:06:40.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:06:40.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:06:50.004 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:06:50.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:07:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:07:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:07:10.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:07:10.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:07:20.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:07:20.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:07:30.005 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:07:30.005 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:07:40.005 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:07:40.005 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:07:50.004 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:07:50.004 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:08:00.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:08:00.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:08:10.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:08:10.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:08:20.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:08:20.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:08:30.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:08:30.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:08:40.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:08:40.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:08:50.007 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:08:50.007 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:09:00.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:09:00.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:09:10.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:09:10.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:09:20.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:09:20.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:09:30.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:09:30.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:09:40.006 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:09:40.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:09:50.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:09:50.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:10:00.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:10:00.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:10:10.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:10:10.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:10:20.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:10:20.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:10:30.003 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:10:30.003 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:10:40.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:10:40.007 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:10:50.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:10:50.008 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:11:00.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:11:00.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:11:10.004 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:11:10.004 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:11:20.005 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:11:20.005 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:11:30.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:11:30.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:11:40.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:11:40.006 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:11:50.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:11:50.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:12:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:12:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:12:10.004 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:12:10.004 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:12:20.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:12:20.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:12:30.005 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:12:30.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:12:40.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:12:40.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:12:50.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:12:50.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:13:00.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:13:00.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:13:10.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:13:10.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:13:20.004 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:13:20.004 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:13:30.006 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:13:30.006 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:13:40.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:13:40.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:13:50.005 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:13:50.005 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:14:00.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:14:00.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:14:10.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:14:10.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:14:20.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:14:20.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:14:30.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:14:30.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:14:40.004 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:14:40.004 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:14:50.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:14:50.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:15:00.006 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:15:00.006 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:15:10.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:15:10.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:15:20.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:15:20.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:15:30.005 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:15:30.005 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:15:40.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:15:40.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:15:50.005 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:15:50.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:16:00.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:16:00.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:16:10.006 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:16:10.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:16:20.005 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:16:20.005 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:16:30.004 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:16:30.004 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:16:40.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:16:40.008 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:16:50.006 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:16:50.006 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:17:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:17:00.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:17:10.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:17:10.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:17:20.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:17:20.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:17:30.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:17:30.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:17:40.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:17:40.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:17:50.006 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:17:50.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:18:00.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:18:00.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:18:10.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:18:10.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:18:20.004 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:18:20.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:18:30.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:18:30.005 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:18:40.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:18:40.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:18:50.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:18:50.006 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:19:00.008 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:19:00.008 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:19:10.005 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:19:10.005 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:19:20.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:19:20.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:19:29.781 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 10280 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 16:19:29.783 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 16:19:30.138 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 16:19:30.339 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 16:19:30.345 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 16:19:30.346 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 16:19:30.413 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 16:19:30.413 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 601 ms
+2021-01-13 16:19:30.489 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 16:19:30.688 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 16:19:31.360 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 16:19:31.361 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 16:19:31.365 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 16:19:31.365 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 16:19:31.366 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 16:19:31.367 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 16:19:31.368 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 16:19:31.368 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 16:19:31.368 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 16:19:31.368 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@317890ea
+2021-01-13 16:19:31.436 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 16:19:31.583 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 16:19:31.583 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-13 16:19:31.607 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 16:19:31.611 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 16:19:31.611 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 16:19:31.613 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 16:19:31.615 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 16:19:31.616 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 16:19:31.623 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.088 seconds (JVM running for 2.953)
+2021-01-13 16:19:38.092 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 16:19:38.092 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 16:19:38.096 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 16:19:38.105 [http-nio-8085-exec-1] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:19:38.131 [http-nio-8085-exec-1] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 16:19:57.391 [http-nio-8085-exec-4] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:19:57.395 [http-nio-8085-exec-4] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId1
+2021-01-13 16:20:10.183 [http-nio-8085-exec-3] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:20:10.188 [http-nio-8085-exec-3] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId2
+2021-01-13 16:20:31.619 [QuartzScheduler_quartzScheduler-NON_CLUSTERED_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2021-01-13 16:20:31.664 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:20:31.664 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:20:40.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:20:40.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:20:50.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:20:50.007 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:21:00.008 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:21:00.008 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:21:10.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:21:10.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:21:20.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:21:20.006 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:21:30.007 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:21:30.007 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:21:40.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:21:40.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:21:50.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:21:50.007 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:22:00.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:22:00.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:22:10.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:22:10.006 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:22:20.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:22:20.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:22:30.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:22:30.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:22:40.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:22:40.005 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:22:50.006 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:22:50.006 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:23:00.008 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:23:00.008 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:23:10.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:23:10.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:23:20.008 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:23:20.008 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:23:30.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:23:30.005 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:23:40.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:23:40.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:23:50.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:23:50.005 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:24:00.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:24:00.007 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:24:10.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:24:10.006 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:24:20.006 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:24:20.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:24:30.005 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:24:30.005 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:24:40.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:24:40.005 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:24:50.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:24:50.005 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:25:00.007 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:25:00.008 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:25:10.006 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:25:10.006 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:25:20.005 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:25:20.005 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:25:30.004 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:25:30.004 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:25:36.524 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 6288 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 16:25:36.526 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 16:25:36.876 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 16:25:37.070 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 16:25:37.076 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 16:25:37.076 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 16:25:37.142 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 16:25:37.142 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 587 ms
+2021-01-13 16:25:37.226 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 16:25:37.434 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 16:25:38.167 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 16:25:38.168 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 16:25:38.172 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 16:25:38.172 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 16:25:38.173 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 16:25:38.174 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 16:25:38.174 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 16:25:38.174 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 16:25:38.174 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 16:25:38.174 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@776015fc
+2021-01-13 16:25:38.239 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 16:25:38.384 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 16:25:38.385 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Will start Quartz Scheduler [quartzScheduler] in 20 seconds
+2021-01-13 16:25:38.392 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.122 seconds (JVM running for 2.996)
+2021-01-13 16:25:58.387 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now, after delay of 20 seconds
+2021-01-13 16:25:58.409 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 16:25:58.412 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 16:25:58.412 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 16:25:58.413 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 16:25:58.414 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 16:25:58.415 [Quartz Scheduler [quartzScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 16:26:38.562 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on LAPTOP-8JN8NDRQ with PID 17768 (D:\IdeaProjects\spring-boot\spring-boot-quartz\target\classes started by HP in D:\IdeaProjects\spring-boot\spring-boot-quartz)
+2021-01-13 16:26:38.564 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-13 16:26:38.922 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.
+2021-01-13 16:26:39.113 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+2021-01-13 16:26:39.118 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-13 16:26:39.118 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-13 16:26:39.183 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring embedded WebApplicationContext
+2021-01-13 16:26:39.183 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 589 ms
+2021-01-13 16:26:39.285 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-13 16:26:39.285 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-01-13 16:26:39.290 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-13 16:26:39.290 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-13 16:26:39.293 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Starting...
+2021-01-13 16:26:39.491 [main] INFO  com.zaxxer.hikari.HikariDataSource - Retail_HikariCP - Start completed.
+2021-01-13 16:26:39.496 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2021-01-13 16:26:39.497 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2021-01-13 16:26:39.497 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-13 16:26:39.497 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-13 16:26:39.497 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-13 16:26:39.498 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@64b0d1fa
+2021-01-13 16:26:39.562 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-13 16:26:39.713 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path '/quartz'
+2021-01-13 16:26:39.714 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Will start Quartz Scheduler [quartzScheduler] in 20 seconds
+2021-01-13 16:26:39.720 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.41 seconds (JVM running for 2.286)
+2021-01-13 16:26:45.944 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/quartz] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-13 16:26:45.945 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-01-13 16:26:45.948 [http-nio-8085-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-01-13 16:26:45.958 [http-nio-8085-exec-1] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:26:46.003 [http-nio-8085-exec-1] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-13 16:26:46.004 [http-nio-8085-exec-1] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2021-01-13 16:26:46.019 [http-nio-8085-exec-1] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-13 16:26:46.019 [http-nio-8085-exec-1] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Recovery complete.
+2021-01-13 16:26:46.020 [http-nio-8085-exec-1] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 'complete' triggers.
+2021-01-13 16:26:46.020 [http-nio-8085-exec-1] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Removed 0 stale fired job entries.
+2021-01-13 16:26:46.021 [http-nio-8085-exec-1] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 16:26:46.053 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:26:46.054 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:26:50.009 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:26:50.009 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:26:57.280 [http-nio-8085-exec-3] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:26:57.286 [http-nio-8085-exec-3] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId1
+2021-01-13 16:26:59.714 [Quartz Scheduler [quartzScheduler]] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now, after delay of 20 seconds
+2021-01-13 16:26:59.714 [Quartz Scheduler [quartzScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-13 16:27:00.009 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:27:00.010 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:27:10.009 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:27:10.009 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:27:20.009 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:27:20.009 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:27:30.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:27:30.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:27:40.009 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:27:40.009 [quartzScheduler_Worker-7] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:27:44.390 [http-nio-8085-exec-2] INFO  com.example.demo.controller.JobController - 新增任务
+2021-01-13 16:27:44.393 [http-nio-8085-exec-2] ERROR com.example.demo.utils.QuartzJobComponent - Add quartz job error, jobName = testJobId2
+2021-01-13 16:27:50.008 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:27:50.008 [quartzScheduler_Worker-8] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:28:00.009 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:28:00.009 [quartzScheduler_Worker-9] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:28:10.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:28:10.008 [quartzScheduler_Worker-10] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:28:20.009 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:28:20.009 [quartzScheduler_Worker-1] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:28:30.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:28:30.006 [quartzScheduler_Worker-2] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:28:40.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:28:40.008 [quartzScheduler_Worker-3] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:28:50.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:28:50.007 [quartzScheduler_Worker-4] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:29:00.007 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:29:00.008 [quartzScheduler_Worker-5] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
+2021-01-13 16:29:10.007 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - begin delwith batch task >>>>>>>>>>>>>>>>>>>>>>>
+2021-01-13 16:29:10.008 [quartzScheduler_Worker-6] INFO  com.example.demo.qzComp.TaskJobDetail - 执行的任务id为：[testJobId0]
